@@ -32,6 +32,29 @@ export function PrintContacts() {
 
 };
 
+function Loading() {
+	return <div id="cssload-wrapper">
+		<div className="cssload-loader">
+			<div className="cssload-line"></div>
+			<div className="cssload-line"></div>
+			<div className="cssload-line"></div>
+			<div className="cssload-line"></div>
+			<div className="cssload-line"></div>
+			<div className="cssload-line"></div>
+			<div className="cssload-subline"></div>
+			<div className="cssload-subline"></div>
+			<div className="cssload-subline"></div>
+			<div className="cssload-subline"></div>
+			<div className="cssload-subline"></div>
+			<div className="cssload-loader-circle-1">
+				<div className="cssload-loader-circle-2"></div>
+			</div>
+			<div className="cssload-needle"></div>
+			<div className="cssload-loading">loading</div>
+		</div>
+	</div>
+};
+
 class App extends Component {
 
 	constructor(props) {
@@ -100,7 +123,7 @@ class App extends Component {
 
 	render() {
 		const {albums, isLoading} = this.state;
-		return (isLoading ? <h1>Loading...</h1> :
+		return (isLoading ? <Loading/> :
 				<Router>
 					<Switch>
 						<Route exact path="/"
