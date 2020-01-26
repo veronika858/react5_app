@@ -1,0 +1,494 @@
+//header-background
+.cover {
+
+//background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/pexels-photo-261187.jpeg');
+  height: 80%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: -137px;
+  filter: blur(11px);
+  -webkit-filter: blur(11px);
+  z-index: -1;
+  overflow: hidden;
+  left: 0;
+}
+
+/*----------------------------------*/
+/*gallery -- header*/
+
+.gallery {
+  position: relative;
+  z-index: 50;
+  height: 1500px;
+  top: 280px;
+  background: $color-bg-body;
+  flex-direction: column;
+  display: flex;
+}
+
+
+.header-title {
+  h3 {
+    z-index: 30;
+    position: relative;
+    margin: 1.5em 0;
+    color: $color-title;
+    letter-spacing: 1.1px;
+    margin-top: -210px;
+  }
+
+  h4 {
+    z-index: 30;
+    position: relative;
+    margin: 1.5em 0;
+    color: $color-title;
+    letter-spacing: 1.1px;
+    border-bottom: 1px solid $color-title;
+    padding-bottom: 1%;
+  }
+}
+
+
+.header-title {
+  h4 {
+    a {
+      color: $color-title;
+      padding-right: 0.5em;
+      vertical-align: middle;
+      font-size: em(20);
+    }
+  }
+}
+
+
+/*--------------------------*/
+/*gallery-set  -- cards--- ul*/
+
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em;
+  width: 25%;
+}
+
+.card {
+  background: $color-bg-item;
+  @include rounded();
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(212, 212, 212, 1);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(212, 212, 212, 1);
+  box-shadow: 0px 0px 3px 0px rgba(212, 212, 212, 1);
+}
+
+.card:hover .card__image,
+.card:focus .card__image
+{
+  -webkit-filter: contrast(100%);
+  filter: contrast(100%);
+  //opacity: 1;
+}
+
+
+.card__image {
+  -webkit-filter: contrast(80%);
+  filter: contrast(80%);
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.5em;
+  text-align: center;
+}
+
+
+/*
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  //-webkit-filter: contrast(70%);
+  //filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+*/
+
+
+.card__title {
+  color: $color-item-h4;
+  margin-top: 6px;
+}
+
+
+.card__counter {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+  color: $color-contact;
+}
+
+
+/*.card__body{
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+}*/
+
+
+/*--------------------------*/
+/*
+add photo --- Page.js --- const addPhoto
+add category ---Gallery.js---const add Category
+*/
+
+.card__button {
+  /*  width: -webkit-fill-available;
+    width: -moz-available;*/
+  //width: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+#card__button {
+  flex-direction: column;
+}
+
+.card__button__add_category {
+  text-align: center;
+  margin-top: auto; //19%;  //14%;
+  margin-bottom: auto; //28%; //20%;
+  color: $color-item-h4;
+  opacity: 0.7;
+  padding: 25% 0;
+
+}
+
+
+.card__button__add_category {
+  h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 2em;
+  }
+}
+
+.card__button__add_photo {
+  h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 2em;
+  }
+}
+
+.card__button__add_category {
+  h6 {
+    font-size: em(15);
+  }
+}
+
+.card__button__add_photo {
+  h6 {
+    font-size: em(15);
+  }
+}
+
+
+.card__button__add_photo {
+  text-align: center;
+  margin-top: auto; //8%;
+  margin-bottom: auto; //17%;
+  color: $color-item-h4;
+  opacity: 0.7;
+  padding: 12% 0;
+
+}
+
+
+/*------------------------*/
+/*contact*/
+.contact {
+  margin: 0.8em;
+
+  a {
+    color: $color-contact;
+    font-size: 1em;
+  }
+
+}
+
+/*-------------------------------------*/
+
+
+/*------------------------------------*/
+/*FANCYBOX*/
+/*HIDE*/
+/*
+.fancybox-button--play, .fancybox-button--zoom, .fancybox-button--thumbs, .fancybox-button--close {
+  display: none !important;
+}
+
+#fancybox-wrap {
+  position: absolute;
+  top: 100px !important;
+}
+*/
+
+
+/*----------------------------------------*/
+/*add category - window with button submit*/
+/*AddCetegory.js*/
+
+#addcategory {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 0 25px 0;
+  text-align: justify;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  visibility: visible;
+  @include clearfix;
+
+}
+
+
+.button-input {
+  border: none;
+  padding: 13px 0;
+  display: block;
+  width: 250%;
+  text-transform: uppercase;
+  font-size: em(15);
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+#addcategory {
+  .button-add {
+    float: right;
+    background: $color-bg-button;
+    border: 1px solid $color-bg-body;
+    @include rounded();
+    text-transform: uppercase;
+    padding: 8px 12px;
+    color: $color-bg-item;
+    font-size: em(14);
+    opacity: 1;
+  }
+
+  p {
+    display: inline-block;
+  }
+
+  h3 {
+    color: $color-item-h4;
+    margin: 30px 0px;
+  }
+}
+
+/*fancybox-close-small ----is hide*/
+
+.addCategory {
+  border-bottom: solid 1px $color-contact;
+  opacity: 0.7;
+}
+
+
+/*-------------------------*/
+/*addphoto -- #addphoto--- Page.js*/
+/*#addphoto - window with button submit*/
+/*FileList.js*/
+
+
+#addphoto {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 0 25px 0;
+  text-align: justify;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  visibility: visible;
+
+  .box-button {
+    float: right;
+    background: $color-bg-button;
+    border: 1px solid $color-bg-body;
+    @include rounded();
+    text-transform: uppercase;
+    padding: 12px 20px;
+    color: $color-bg-item;
+    font-size: em(14);
+    margin: 15px 6px;
+    opacity: 1;
+  }
+
+  h3 {
+    color: $color-item-h4;
+    margin: 30px 0px;
+    font-size: em(21);
+  }
+}
+
+
+#addphoto {
+
+  label {
+    position: relative;
+    text-align: center;
+    color: $color-item-h4;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+
+    strong {
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+/*fancybox-close-small ----is hide*/
+
+.dropzone {
+  opacity: 0.7;
+}
+
+.box-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.box {
+  font-size: 1rem;
+  position: relative;
+  padding: 30px 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23DCDCDCFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  color: $color-contact;
+  @include rounded();
+  opacity: 0.7;
+  background-color: $color-bg-item;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+
+  .box-dragndrop {
+    text-transform: uppercase;
+    margin: 4px 160px;
+    padding: 6px;
+    background: $color-bg-item;
+    border: 3px solid $color-item-h4;
+    @include rounded();
+  }
+
+  .box-icon {
+    width: 100%;
+    height: 46px;
+    fill: $color-item-h4;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+}
+
+/*----------------------------------------*/
+//delete
+
+.delete {
+  z-index: 100;
+  position: absolute;
+  font-size: em(23);
+  opacity: 0;
+  background: #FFF;
+  display: flex;
+}
+
+.cards__item:hover .delete,
+.cards__item:focus .delete {
+  opacity: 0.4;
+}
+
+.delete:active {
+  opacity: 1;
+}
+
+/*
+.fancybox-button--delete{
+  background: rgba(30, 30, 30, .6);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  margin: 0px;
+  padding: 1px;
+  position: absolute;
+  transition: color .2s;
+  vertical-align: top;
+  visibility: inherit;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  right: 2px;
+  bottom: -41px;
+  color: #fff;
+
+}
+ */
