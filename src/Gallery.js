@@ -10,7 +10,7 @@ import {DeleteGalleryOrImage, PrintContacts} from "./App";
 import {css, jsx} from "@emotion/core";
 
 
-class Gallery extends React.Component {
+class Gallery extends React.PureComponent {
 	state = {lastActiveGallery: ""};
 
 	constructor(props) {

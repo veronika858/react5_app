@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './scss/main.css';
 import Page from './Page';
 import Gallery from "./Gallery";
@@ -55,7 +55,7 @@ function Loading() {
 	</div>
 };
 
-class App extends Component {
+class App extends React.PureComponent {
 
 	constructor(props) {
 		super(props);
@@ -128,6 +128,7 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/"
 						       render={() => <Gallery albums={albums}/>}
+
 						/>
 						<Route exact path={albums.pathname}
 						       render={() => <Page page={albums}/>}
